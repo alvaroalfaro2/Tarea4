@@ -49,12 +49,35 @@ Para un SNR = 3 dB
 ![AWGN_SNR3](AWGN_SNR3.png)
 
 4. Gráfica de la densidad espectral de potencia de la señal con el método de Welch (SciPy), antes y después del canal ruidoso.
+
+A continuación se muestra la gráfica de la densidad espectral de potencia de la señal antes del canal ruidoso.
+
 ![Antes_SNR-2](Antes_SNR-2.png)
+
+A continuación se muestra las gráficas de la densidad espectral de potencia de la señal después del canal ruidoso, para cada SNR.
+
+Para un SNR = -2 dB
+
 ![Despues_SNR-2](Despues_SNR-2.png)
+
+Para un SNR = -1 dB
+
 ![Despues_SNR-1](Despues_SNR-1.png)
+
+Para un SNR = 0 dB
+
 ![Despues_SNR0](Despues_SNR0.png)
+
+Para un SNR = 1 dB
+
 ![Despues_SNR1](Despues_SNR1.png)
+
+Para un SNR = 2 dB
+
 ![Despues_SNR2](Despues_SNR2.png)
+
+Para un SNR = 3 dB
+
 ![Despues_SNR3](Despues_SNR3.png)
 
 5. Demodulación y decodificación de la señal y conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
