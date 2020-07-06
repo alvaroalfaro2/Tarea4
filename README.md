@@ -27,12 +27,14 @@
 
 5. Demodulación y decodificación de la señal y conteo de la tasa de error de bits (BER, bit error rate) para cada nivel SNR.
 
-| Parámetro | Valor |
-| ------ | ---- |
-| mu para FDM de X  | 9,9048     |
-| sigma para FDM de X | 3,2994 |
-| mu para FDM de Y  | 15,0795     |
-| sigma para FDM de Y | 6,0269  |
+| SNR | Cantidad de errores | Tasa de error de bits (BER) | 
+| ------ | ---- | ---- |
+| -2 | 11 | 0,0011  |
+| -1 | 3 | 0,0003 |
+| 0 | 1  | 0,0001  |
+| 1 | 1  | 0,0001 |
+| 2 | 0  | 0 |
+| 3 | 0  | 0 |
 
 6. Gráfica BER versus SNR.
 
