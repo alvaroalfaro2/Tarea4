@@ -84,7 +84,10 @@ Ps = integrate.trapz(Pinst, t) / (N * T)
 
 # Relación señal-a-ruido deseada
 SNR=[-2,-1,0,1,2,3]
+#Tasa de error de bits. Se hace como un arreglo para guardar el valor de BER con el respectivo SNR y luego graficarlos
 BER = np.zeros(len(SNR))
+
+#Ciclo para simular todos los SNR deseados (desde -2 hasta 3)
 for i in range (0,6):
   
   # Potencia del ruido para SNR y potencia de la señal dadas
@@ -99,6 +102,7 @@ for i in range (0,6):
   # Simular "el canal": señal recibida
   Rx = senal + ruido
 
+  #Se grafica la señal modulada con su respectivo ruido 
   plt.figure()
   plt.plot(Rx[0:pb*p])
   plt.savefig('AWGN _SNR={}.png'.format(SNR[i]))
@@ -134,11 +138,11 @@ for i in range (0,6):
       else:
           bitsRx[k] = 0
 
-  err = np.sum(np.abs(bits - bitsRx))
-  BER[i] = (err/N)
+  err = np.sum(np.abs(bits - bitsRx)) #Numero de bits diferentes 
+  BER[i] = (err/N) 
 
   print('Para un SNR de {}, hay un total de {} errores en {} bits para una tasa de error de {}.'.format(SNR[i], err, N, BER[i]))
-
+#Gráfica BER en función del SNR
 plt.figure()
 plt.plot(SNR,BER, marker="o", color="red")
 plt.xlabel('SNR')
